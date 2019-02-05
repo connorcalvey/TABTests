@@ -104,7 +104,7 @@ os.system('brew cask install spotify slack zoomus google-backup-and-sync google-
 # Installing Printer and drive
 print "Installing TAB Printer"
 os.system('sudo curl -o /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/Xerox+AltaLink+C8055.gz')
-os.system('lpadmin -p TAB INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp://10.2.0.24 -o printer-is-shared=“False”  -P /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz')
+os.system('lpadmin -p INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp://10.2.0.24 -o printer-is-shared=“False”  -P /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz')
 
 #Random OSX Settings
 print "Tweaking OSX Settings"
@@ -125,4 +125,4 @@ os.system('open -a "Google Chrome" --args --make-default-browser')
 # Clean Up
 os.system('brew cleanup && brew cask cleanup')
 
-show_notification("All done! Enjoy your new macOS Thank you for joining TAB ^^!")
+show_notification("Setup Complete. Well Done :)")
