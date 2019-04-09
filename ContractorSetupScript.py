@@ -8,7 +8,7 @@ import urllib2
 import subprocess
 import shlex
 
-name = ''
+name = Contractor
 email = ''
 assettag = ''
 
@@ -37,7 +37,7 @@ os.system('osascript -e \'tell application "Finder" to set desktop picture to PO
 
 # Basic Info
 while name == '':
-  name = Contractor
+  name = raw_input("What's your first name and surname?\n").strip()
 
 #while email == '' or '@' not in email:
 #  email = raw_input("What's your email?\n").strip()
@@ -100,7 +100,6 @@ os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json
 # Installing third party apps
 print "Installing Essential Apps"
 os.system('brew cask install spotify slack zoomus google-backup-and-sync google-chrome')
-system('lpadmin -p INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp://10.2.0.24 -o printer-is-shared=“False”  -P /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz')
 
 #Random OSX Settings
 print "Tweaking OSX Settings"
