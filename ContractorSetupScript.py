@@ -8,7 +8,7 @@ import urllib2
 import subprocess
 import shlex
 
-name = Contractor
+name = ''
 email = ''
 assettag = ''
 
@@ -37,7 +37,7 @@ os.system('osascript -e \'tell application "Finder" to set desktop picture to PO
 
 # Basic Info
 while name == '':
-  name = raw_input("What's your first name and surname?\n").strip()
+  name = Contractor
 
 #while email == '' or '@' not in email:
 #  email = raw_input("What's your email?\n").strip()
