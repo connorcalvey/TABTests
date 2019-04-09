@@ -8,7 +8,7 @@ import urllib2
 import subprocess
 import shlex
 
-name = 'Contractor'
+name = ''
 email = ''
 assettag = ''
 
@@ -36,8 +36,8 @@ print "\n\nWelcome to the Mac Setup Script by TAB\n"
 os.system('osascript -e \'tell application "Finder" to set desktop picture to POSIX file "/Library/TAB/tab-background.png"\'')
 
 # Basic Info
-while name == 'Contractor':
-  name = 'Contractor'
+while name == '':
+  name = TAB Contractor
 
 #while email == '' or '@' not in email:
 #  email = raw_input("What's your email?\n").strip()
