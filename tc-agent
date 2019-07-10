@@ -32,3 +32,12 @@ os.system('sudo curl -o /Library/TAB/teamcity-icon.png https://it-services.s3-eu
 Test commands below to change the user icon: 
 
 sudo dscl . -append '/Users/tabadmin' Picture '/Library/TAB/tab-icon.png'
+
+To enable remote login: 
+
+sudo systemsetup -setremotelogin on
+
+To enable remote management:
+
+sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -users admin -privs -all -restart -agent -menu
+
