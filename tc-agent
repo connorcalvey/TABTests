@@ -29,21 +29,15 @@ os.system('sudo mkdir /Library/TAB')
 os.system('sudo curl -o /Library/TAB/tab-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/TAB_600x600.png')
 os.system('sudo curl -o /Library/TAB/teamcity-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
 
-Test commands below to change the user icon: 
+# Change User Icons 
 
 sudo /usr/bin/dscl . delete /Users/teamcity JPEGPhoto
 sudo /usr/bin/dscl . create /Users/teamcity Picture "Library/TAB/teamcity-icon.png"
-
 sudo /usr/bin/dscl . delete /Users/tabadmin JPEGPhoto
 sudo /usr/bin/dscl . create /Users/tabadmin Picture "Library/TAB/tab-icon.png"
 
-
-
-To enable remote login: 
+# Enabling Remote Login, Remote Management and Remote Apple Events
 
 sudo systemsetup -setremotelogin on
-
-To enable remote management:
-
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -users admin -privs -all -restart -agent -menu
-
+sudo systemsetup -setremoteappleevents on
