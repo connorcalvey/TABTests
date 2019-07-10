@@ -11,7 +11,7 @@ import shlex
 
 name = ''
 email = ''
-assettag = ''
+tc-agent-name = ''
 
 
 # Check if Xcode Command Line Tools are installed
