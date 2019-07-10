@@ -11,3 +11,7 @@ Contractors
 Spare
 
 /usr/bin/python -c "$(curl -fsSL https://raw.githubusercontent.com/connorcalvey/TABTests/master/SpareSetupScript.py)"
+
+TeamCity 
+
+/usr/bin/python -c "$(curl -fsSL https://raw.githubusercontent.com/connorcalvey/TABTests/master/tc-agent.py)"
