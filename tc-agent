@@ -29,3 +29,6 @@ os.system('sudo mkdir /Library/TAB')
 os.system('sudo curl -o /Library/TAB/tab-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/TAB_600x600.png')
 os.system('sudo curl -o /Library/TAB/teamcity-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
 
+Test commands below to change the user icon: 
+
+sudo dscl . -append '/Users/tabadmin' Picture '/Library/TAB/tab-icon.png'
