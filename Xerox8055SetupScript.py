@@ -8,10 +8,6 @@ import urllib2
 import subprocess
 import shlex
 
-name = ''
-email = ''
-assettag = ''
-
 # Check if Xcode Command Line Tools are installed
 if os.system('xcode-select -p') != 0:
   print "Installing XCode Tools"
@@ -23,7 +19,7 @@ if os.system('xcode-select -p') != 0:
 
 # Installing Printer and driver
 
-print "Installing OfficePrinter"
+print "Installing Office Printer"
 os.system('sudo curl -o /Library/Printers/PPDs.zip https://s3-eu-west-1.amazonaws.com/it-services/XeroxC8055Script/PPDs.zip')
 os.system('sudo curl -o /Library/Printers/Xerox.zip https://s3-eu-west-1.amazonaws.com/it-services/XeroxC8055Script/Xerox.zip')
 os.system('sudo unzip /Library/Printers/PPDs.zip')
