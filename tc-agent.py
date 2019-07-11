@@ -88,6 +88,14 @@ os.system('sudo systemsetup -setremotelogin on')
 os.system('sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -users admin -privs -all -restart -agent -menu')
 os.system('sudo systemsetup -setremoteappleevents on')
 
+# Download TAB files
+os.system('sudo mkdir /Library/TAB')
+# TAB icon
+os.system('sudo curl -o /Library/TAB/tab-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/TAB_600x600.png')
+os.system('sudo curl -o /Library/TAB/teamcity-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
+os.system('sudo curl -o /Library/TAB/tab-background.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
+
+
 
 
 
