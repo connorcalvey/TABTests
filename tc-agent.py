@@ -28,7 +28,7 @@ os.system('sudo mkdir /Library/TAB')
 # TAB icon
 os.system('sudo curl -o /Library/TAB/tab-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/TAB_600x600.png')
 os.system('sudo curl -o /Library/TAB/teamcity-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
-os.system('sudo curl -o /Library/TAB/tab-background.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
+os.system('sudo curl -o /Library/TAB/tab-background.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/tab-background.png')
 
 # Sudo: Spectacle, ZSH, OSX Settings
 print "\n\nWelcome to the Mac Setup Script by TAB\n"
