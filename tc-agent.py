@@ -37,13 +37,13 @@ os.system('osascript -e \'tell application "Finder" to set desktop picture to PO
 
 # Basic Info
 while name == '':
-  name = 'TeamCity'
+  name = raw_input("What's your first name and surname?\n").strip()
 
 #while email == '' or '@' not in email:
 #  email = raw_input("What's your email?\n").strip()
   
-while assettag ==  '' or 'TABLT' not in assettag:
-  assettag = raw_input("Please enter the asset tag on the bottom of the laptop.\n").strip()
+while assettag ==  '' or 'tc-agent' not in assettag:
+  assettag = raw_input("Please enter the name of the TeamCity Agent.\n").strip()
 
 
 def show_notification(text):
@@ -51,7 +51,7 @@ def show_notification(text):
   
 #urllib.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
 #os.system('chmod +x create-user.sh')
-#subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" Welcome2tab! ' + name.replace(' ', '')))
+#subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" AlwaysTesting! ' + name.replace(' ', '')))
 
 
 
