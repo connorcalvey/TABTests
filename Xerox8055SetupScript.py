@@ -1,3 +1,27 @@
+#!/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+# -*- coding: utf-8 -*-
+
+import os
+import json
+import urllib
+import urllib2
+import subprocess
+import shlex
+
+name = ''
+email = ''
+assettag = ''
+
+
+# Check if Xcode Command Line Tools are installed
+if os.system('xcode-select -p') != 0:
+  print "Installing XCode Tools"
+  os.system('xcode-select --install')
+  print "**************************************************************"
+  print "Install the XCode Command Line Tools and run this script again"
+  print "**************************************************************"
+  exit()
+
 # Installing Printer and driver
 
 print "Installing INKBOT Printer"
