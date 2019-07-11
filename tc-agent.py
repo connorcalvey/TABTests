@@ -37,7 +37,7 @@ os.system('osascript -e \'tell application "Finder" to set desktop picture to PO
 
 # Basic Info
 while name == '':
-  name = raw_input("What's your first name and surname?\n").strip()
+  name = 'TeamCity'
 
 #while email == '' or '@' not in email:
 #  email = raw_input("What's your email?\n").strip()
@@ -68,10 +68,10 @@ print "*************************************"
 
 
 # Set computer name info (as done via System Preferences → Sharing)
-os.system('sudo scutil --set ComputerName ' + assettag + '-' + name.replace(' ', ''))
-os.system('sudo scutil --set HostName ' + assettag + '-' + name.replace(' ', ''))
-os.system('sudo scutil --set LocalHostName ' + assettag + '-' + name.replace(' ', '')) # Doesn't support spaces
-os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string ' + assettag + '-' + name.replace(' ', ''))
+os.system('sudo scutil --set ComputerName ' + assettag + ')
+os.system('sudo scutil --set HostName ' + assettag + ')
+os.system('sudo scutil --set LocalHostName ' + assettag + ') # Doesn't support spaces
+os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string ' + assettag + ')
 
 show_notification("Laptop name: " + assettag + '-' + name.replace(' ', ''))
 
