@@ -68,10 +68,10 @@ print "*************************************"
 
 
 # Set computer name info (as done via System Preferences → Sharing)
-os.system('sudo scutil --set ComputerName 'assettag')
-os.system('sudo scutil --set HostName 'assettag')
-os.system('sudo scutil --set LocalHostName 'assettag') # Doesn't support spaces
-os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string 'assettag')
+os.system('sudo scutil --set ComputerName assettag)
+os.system('sudo scutil --set HostName assettag)
+os.system('sudo scutil --set LocalHostName assettag) # Doesn't support spaces
+os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string assettag)
 
 show_notification("Laptop name: "assettag(' ', ''))
 
