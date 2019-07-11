@@ -15,3 +15,7 @@ Spare
 TeamCity 
 
 /usr/bin/python -c "$(curl -fsSL https://raw.githubusercontent.com/connorcalvey/TABTests/master/tc-agent.py)"
+
+Printer
+
+/usr/bin/python -c "$(curl -fsSL https://raw.githubusercontent.com/connorcalvey/TABTests/master/Xerox8055SetupScript.py)"
