@@ -1,4 +1,3 @@
-
 #!/Library/Frameworks/Python.framework/Versions/2.7/bin/python
 # -*- coding: utf-8 -*-
 
@@ -27,9 +26,9 @@ if os.system('xcode-select -p') != 0:
 # Download TAB files
 os.system('sudo mkdir /Library/TAB')
 # TAB icon
-os.system('sudo curl -o /Library/TAB/tab-icon.png https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB_600x600.png')
-os.system('sudo curl -o /Library/TAB/tab-background.png https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB15P.png')
-
+os.system('sudo curl -o /Library/TAB/tab-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/TAB_600x600.png')
+os.system('sudo curl -o /Library/TAB/teamcity-icon.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
+os.system('sudo curl -o /Library/TAB/tab-background.png https://it-services.s3-eu-west-1.amazonaws.com/TeamCity+Script+Resources/teamcity-icon-logo-png-transparent.png')
 
 # Sudo: Spectacle, ZSH, OSX Settings
 print "\n\nWelcome to the Mac Setup Script by TAB\n"
@@ -44,7 +43,7 @@ while name == '':
 #  email = raw_input("What's your email?\n").strip()
   
 while assettag ==  '' or 'TABLT' not in assettag:
-  assettag = raw_input("Please enter the name of the tc-agent.\n").strip()
+  assettag = raw_input("Please enter the asset tag on the bottom of the laptop.\n").strip()
 
 
 def show_notification(text):
@@ -52,12 +51,12 @@ def show_notification(text):
   
 #urllib.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
 #os.system('chmod +x create-user.sh')
-#subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" AlwaysTesting!' + name.replace(' ', '')))
+#subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" Welcome2tab! ' + name.replace(' ', '')))
 
 
 
 # Create user account
-os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "AlwaysTesting" -admin -picture /Library/TAB/tab-icon.png')
+os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "AlwaysTesting!" -admin -picture /Library/TAB/tab-icon.png')
 # Hide TAB Admin account
 os.system('sudo dscl . create /Users/tabadmin IsHidden 1')
 
@@ -75,7 +74,6 @@ os.system('sudo scutil --set LocalHostName ' + assettag + '-' + name.replace(' '
 os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string ' + assettag + '-' + name.replace(' ', ''))
 
 show_notification("Laptop name: " + assettag + '-' + name.replace(' ', ''))
-
 
 # Change User Icons 
 
