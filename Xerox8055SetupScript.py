@@ -12,7 +12,6 @@ name = ''
 email = ''
 assettag = ''
 
-
 # Check if Xcode Command Line Tools are installed
 if os.system('xcode-select -p') != 0:
   print "Installing XCode Tools"
