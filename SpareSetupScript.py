@@ -56,7 +56,7 @@ def show_notification(text):
 
 
 # Create user account
-os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "Spar3Us3r" -admin -picture /Library/TAB/tab-icon.png')
+os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "Spar3Us3r!" -admin -picture /Library/TAB/tab-icon.png')
 # Hide TAB Admin account
 os.system('sudo dscl . create /Users/tabadmin IsHidden 1')
 
