@@ -101,11 +101,6 @@ os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json
 print "Installing Essential Apps"
 os.system('brew cask install spotify slack zoomus google-backup-and-sync google-chrome')
 
-# Installing Printer and drive
-print "Installing TAB Printer"
-os.system('sudo curl -o /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/Xerox+AltaLink+C8055.gz')
-os.system('lpadmin -p INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp://10.2.0.24 -o printer-is-shared=“False”  -P /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz')
-
 #Random OSX Settings
 print "Tweaking OSX Settings"
 
@@ -126,11 +121,13 @@ os.system('open -a "Google Chrome" --args --make-default-browser')
 os.system('brew cleanup && brew cask cleanup')
 
 # Installing Printer and driver
-print "Installing INKBOT Printer"
+
+print "Installing TAB-INKBOT"
 os.system('sudo curl -o /Library/Printers/PPDs.zip https://s3-eu-west-1.amazonaws.com/it-services/XeroxC8055Script/PPDs.zip')
 os.system('sudo curl -o /Library/Printers/Xerox.zip https://s3-eu-west-1.amazonaws.com/it-services/XeroxC8055Script/Xerox.zip')
 os.system('sudo unzip /Library/Printers/PPDs.zip')
 os.system('sudo unzip /Library/Printers/Xerox.zip -d /Library/Printers/')
-os.system('lpadmin -p INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp://10.2.0.24 -o printer-is-shared=“False”  -P /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz')
+os.system('sudo curl -o /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/Xerox+AltaLink+C8055.gz')
+os.system('lpadmin -p TAB-INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp://10.5.0.10 -o printer-is-shared=“False”  -P /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz')
 
 show_notification("Script Complete :)")
