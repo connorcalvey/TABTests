@@ -130,4 +130,11 @@ os.system('sudo unzip /Library/Printers/Xerox.zip -d /Library/Printers/')
 os.system('sudo curl -o /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/Xerox+AltaLink+C8055.gz')
 os.system('lpadmin -p TAB-INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp://10.5.0.10 -o printer-is-shared=“False”  -P /Library/Printers/PPDs/Contents/Resources/Xerox\ AltaLink\ C8055.gz')
 
+# Show VPN in menu bar
+
+print "Show VPN in Menu bar"
+
+os.system('defaults write com.apple.systemuiserver menuExtras -array-add “/System/Library/CoreServices/Menu Extras/vpn.menu"')
+os.system('killall SystemUIServer -HUP')
+
 show_notification("Script Complete :)")
