@@ -134,7 +134,7 @@ os.system('lpadmin -p TAB-INKBOT -L "2nd Floor, The Spitfire Building" -E -v ipp
 
 print "Show VPN in Menu bar"
 
-os.system('defaults write com.apple.systemuiserver menuExtras -array-add “/System/Library/CoreServices/Menu Extras/vpn.menu"')
+os.system('defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/vpn.menu"')
 os.system('killall SystemUIServer -HUP')
 
 show_notification("Script Complete :)")
